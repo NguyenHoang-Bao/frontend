@@ -1,0 +1,9 @@
+{
+    "compilerOptions":{
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "noEmit":true,
+        "jsx":"react-jsx"
+    },
+    "include": ["src", "src/vite-env.d.ts"] 
+}
