@@ -79,7 +79,8 @@ export default function Login() {
         const isAdmin = data.roles?.some((r: string) => r.includes("ADMIN"));
         const currentUser = {
           id: data.idUser,
-          fullName: data.fullName,
+          name: data.fullName || data.username,
+          fullName: data.fullName || data.username,
           email: data.email,
           roles: data.roles,
           avatar: data.avatar,
@@ -141,7 +142,8 @@ export default function Login() {
       const isAdmin = data.roles?.some((r: string) => r.includes("ADMIN"));
       const currentUser = {
         id: data.idUser,
-        fullName: data.fullName,
+        name: data.fullName || data.username,
+        fullName: data.fullName || data.username,
         email: data.email,
         roles: data.roles,
         avatar: data.avatar,
