@@ -7,8 +7,8 @@
 // ============================================================
 
 // ─── Địa chỉ gốc của Backend Spring Boot ────────────────────
-// Khi deploy thật thì đổi thành URL server của m (VPS / Render / Railway)
-const BASE_URL = 'http://localhost:8080/api';
+// Khi deploy thật (Vercel/Render) thì cấu hình biến môi trường VITE_API_BASE_URL
+export const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api';
 
 // ─── Hàm tiện ích: lấy JWT token từ localStorage ─────────────
 // Login thành công thì backend trả về token, frontend lưu vào localStorage['token']
