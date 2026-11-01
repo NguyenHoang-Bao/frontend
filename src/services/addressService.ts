@@ -102,9 +102,9 @@ export const addressService = {
     const isFirst = list.length === 0;
     const shouldBeDefault = isFirst || Boolean(data.isDefault);
 
-    const updatedList = list.map(item => ({
+    const updatedList: UserAddress[] = list.map(item => ({
       ...item,
-      isDefault: shouldBeDefault ? false : item.isDefault
+      isDefault: shouldBeDefault ? false : Boolean(item.isDefault)
     }));
 
     const newAddress: UserAddress = {

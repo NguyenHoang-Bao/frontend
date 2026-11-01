@@ -18,7 +18,7 @@ function getToken(): string | null {
 
 // ─── Hàm fetch có kèm Authorization header ───────────────────
 // Đây là hàm gốc - tất cả các hàm bên dưới đều dùng nó
-async function apiFetch<T>(
+export async function apiFetch<T>(
   path: string,
   options: RequestInit = {}
 ): Promise<T> {
